@@ -26,7 +26,7 @@ class MultiauthServiceProvider extends ServiceProvider
         if ($this->canHaveAdminBackend()) {
             $this->loadViewsFrom(__DIR__ . '/views', 'multiauth');
             $this->registerRoutes();
-            $this->publisheThings();
+            $this->publishThings();
             $this->mergeConfigFrom(__DIR__ . '/../config/multiauth.php', 'multiauth');
             $this->mergeAuthFileFrom(__DIR__ . '/../config/auth.php', 'auth');
             $this->loadBladeSyntax();
@@ -134,7 +134,7 @@ class MultiauthServiceProvider extends ServiceProvider
         return $auth;
     }
 
-    protected function publisheThings()
+    protected function publishThings()
     {
         $prefix = config('multiauth.prefix', 'admin');
         $this->publishes([
